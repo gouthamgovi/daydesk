@@ -19,7 +19,6 @@ export function createClient() {
             );
           } catch {
             // Server Components can't set cookies — ignore.
-            // The middleware handles session refresh.
           }
         },
       },

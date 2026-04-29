@@ -23,9 +23,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  // IMPORTANT: getUser() refreshes the session if needed.
   const { data: { user } } = await supabase.auth.getUser();
-
   const isAuthPage = request.nextUrl.pathname.startsWith('/login');
 
   if (!user && !isAuthPage) {
@@ -45,7 +43,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Match all paths except static assets, images, favicon, api routes
     '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
