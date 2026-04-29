@@ -165,7 +165,6 @@ function Dashboard({
     >
       <DashCard
         title="Today at a glance"
-        gradient="linear-gradient(135deg, #fffbf5 0%, #fcebd8 100%)"
         glow
         cssVar="card-gradient-1"
       >
