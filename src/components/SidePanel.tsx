@@ -39,7 +39,7 @@ export default function SidePanel({ taskId, onClose }: Props) {
   const [draft, setDraft] = useState<Task | null>(null);
   const [tagInput, setTagInput] = useState('');
   const [saveStatus, setSaveStatus] = useState<'saved' | 'saving'>('saved');
-  const saveTimer = useRef<NodeJS.Timeout | null>(null);
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (task) setDraft({ ...task });

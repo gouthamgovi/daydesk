@@ -163,11 +163,7 @@ function Dashboard({
         marginBottom: 22,
       }}
     >
-      <DashCard
-        title="Today at a glance"
-        glow
-        cssVar="card-gradient-1"
-      >
+      <DashCard title="Today at a glance" glow cssVar="card-gradient-1">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 14 }}>
           <Stat num={total} label="Total" />
           <Stat num={must} label="Must do" cls="must" />
